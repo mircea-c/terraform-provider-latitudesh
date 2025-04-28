@@ -37,9 +37,10 @@ func Provider() *schema.Provider {
 			"latitudesh_firewall_assignment": resourceFirewallAssignment(),
 		},
 		DataSourcesMap: map[string]*schema.Resource{
-			"latitudesh_plan":   dataSourcePlan(),
-			"latitudesh_region": dataSourceRegion(),
-			"latitudesh_role":   dataSourceRole(),
+			"latitudesh_plan":        dataSourcePlan(),
+			"latitudesh_region":      dataSourceRegion(),
+			"latitudesh_role":        dataSourceRole(),
+			"latitudesh_server_list": dataSourceServerList(),
 		},
 		ConfigureContextFunc: providerConfigure,
 	}
